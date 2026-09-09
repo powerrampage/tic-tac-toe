@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tic-Tac-Toe</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 30px;
+      }
+      .board {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        gap: 5px;
+        justify-content: center;
+        margin-top: 15px;
+      }
+      .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+        background: #eee;
+        border: none;
+        cursor: pointer;
+      }
+      .cell:disabled {
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Tic-Tac-Toe</h2>
+    <input id="room" placeholder="Room Name" value="game1" />
+    <button onclick="join()">Join</button>
+    <p id="title">Enter room name to play</p>
+    <div class="board" id="board"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
